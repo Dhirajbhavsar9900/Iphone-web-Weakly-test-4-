@@ -4,7 +4,7 @@ body {
 
 .mt-28{
     animation: bounce 3s infinite;
-    /* -webkit-filter: drop-shadow(10px 10px 10px #666666); */
+    
     filter: drop-shadow(3px 3px 3px #666666);
 }
 

@@ -5,7 +5,7 @@ const phoneContainer = document.getElementById("phoneContainer");
 const phoneDetails = document.getElementById("phoneDetails");
 
 async function showResult(showMore) {
-  console.log(inputSearch.value);
+ 
   let response = await fetch(
     "https://openapi.programming-hero.com/api/phones?search=" +
       inputSearch.value
@@ -14,7 +14,7 @@ async function showResult(showMore) {
   console.log(data);
 
   phoneContainer.innerHTML = "";
-  for (let i = 0; i < 10; i++) {
+  for (let i = 0; i < 15; i++) {
     let card = phones(data.data[i]);
   }
 }
@@ -37,15 +37,14 @@ function phones(data) {
     "rounded-lg"
   );
   div.innerHTML = `
-    <img src="${phone.image}" class="rounded-lg ">
+    <img src="${phone.image}" class="rounded-lg">
     <h1 class="text-2xl font-bold">${phone.phone_name}</h1>
-    <p class="text-center w-[360px] text-xl">There are many variations of passages of available, but the majority have suffered</p>
+    <a class="text-center w-[360px] text-l cursor-pointer">${phone.image}</a>
+    <p class="text-center w-[360px] text-xl">${phone.slug}</p>
+    
     <button class="show-details-button bg-violet-700 text-white p-5 rounded-lg text-xs font-bold hover:bg-violet-800">SHOW DETAILS</button>
     `;
   phoneContainer.appendChild(div);
-
-  div
-   
 }
 
 btn.addEventListener("click", function (event) {
