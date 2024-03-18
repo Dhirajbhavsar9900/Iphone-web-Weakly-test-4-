@@ -2,8 +2,8 @@ body {
     font-family: "Poppins", sans-serif;
 }
 
-.mt-28{
-    animation: bounce 3s infinite;
+/* .mt-28{
+    animation: bounce 3s infinite ease-in-out;
     
     filter: drop-shadow(3px 3px 3px #666666);
 }
@@ -13,11 +13,12 @@ body {
       transform: translateY(-3%);
       animation-timing-function: cubic-bezier(2, 0, 4, 4);
     }
-    50% {
+    40% {
       transform: translateY(0);
       animation-timing-function: cubic-bezier(0, 0, 1, 2);
     }
-}
+} */
+
 
 .py-20 {
     padding-top: 2rem;
@@ -28,3 +29,5 @@ body {
 .dhiraj {
     filter: drop-shadow(10px 10px 10px #666666);
 }
+
+
